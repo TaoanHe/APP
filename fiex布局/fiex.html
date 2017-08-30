@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=1.0" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style>
+					.iconfont{
+    font-family:"iconfont" !important;
+    font-size:35px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.5px;
+    -moz-osx-font-smoothing: grayscale;}
+             .bottom-menu{
+             	font-size:25px;
+             	color: #D6D6D6;
+             }
+             .bottom-menu p{
+             	font-size: 12px;
+             }
+             .home{
+             	color: #0DC441;
+             }
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			ul{
+				list-style: none;
+			}
+			.contianer{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			header{
+				width: 100%;
+				height: 40px;
+				background: #0DC441;
+			}
+			nav ul{
+				display: flex;
+				width: 100%;
+				height: 45px;
+				justify-content: space-around;
+				align-items: center;
+			}
+			nav ul li{
+				font-size: 20px;
+				/*font-weight: bold;*/
+			}
+			nav ul li:nth-child(1){
+				color: #0DC441;
+				height: 45px;
+				line-height: 45px;
+				border-bottom: 3px solid #0DC441;
+			}
+			section{
+				flex: 1;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+			}
+			section ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				/*justify-content: space-around;*/
+				flex-wrap: wrap;
+				align-content: space-between;
+				align-content: flex-start;
+			}
+			section ul li{
+				width: 50%;
+				display: flex;
+				flex-direction:column ;
+				align-items: center;
+				justify-content: center;
+				margin-top: 4px;
+				padding: 0 4px;
+				
+			}
+			/*section ul li p{
+				width: 200px;
+				height: 60px;
+				font-size: 18px;
+				font-weight: bold;
+			}*/
+			@media screen and (max-width: 321px) {
+                section ul li {
+                    font-size: 14px;
+                }
+            }
+
+            @media screen and (min-width: 322px) and (max-width: 400px) {
+                section ul li {
+                    font-size: 16px;
+                }
+            }
+
+            @media screen and (min-width: 400px) {
+                section ul li {
+                    font-size: 18px;
+                }
+            }
+			section ul li img{
+				width: 100%;
+			}
+			section ul li p{
+				font-weight: bold;
+			}
+			.menu,.ercode{
+				color: #86E2A0;
+			}
+			header ul{
+				display: flex;
+				justify-content: space-around;
+			}
+			header ul li span:nth-child(1){				
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				color: white;
+				text-align: center;
+				line-height: 30px;
+				background: #0AD895;
+				border-radius: 10px 0px 0px 10px;
+				position: relative;
+			}
+			header ul li span:nth-child(1)::after{
+				content: "关注";
+				display: inline-block;
+				width: 60px;
+				height: 30px;
+				color: rgba(0,0,0,0.1);
+				text-align: center;
+				line-height: 30px;
+				background: #0BCF63;
+				border-radius: 0px 10px 10px 0px;
+				position: absolute;
+				left: 60px;
+			}
+			footer{
+				width: 100%;
+				height: 45px;
+				background: #fff;
+				border: 1px solid rgba(0,0,0,0.15);
+			}
+			footer ul{
+				display: flex;
+				justify-content: space-around;
+			}
+			footer ul li{
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+			}
+			.cl{
+				width: 50px;
+				height: 50px;
+				background: #fff;
+				border: 1px solid #D6D6D6;
+				border-radius: 50%;
+				margin-top: -8px;
+				text-align: center;
+				line-height: 50px;											
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contianer">
+			<header>
+				<ul>
+					<li class="iconfont menu">&#xe728;</li>
+					<li>
+						<span>热点</span>
+					</li>
+					<li class="iconfont ercode">&#xe6cf;</li>
+				</ul>
+			</header>
+			<nav>
+				<ul>
+					<li>足球现场</li>
+					<li>足球生活</li>
+					<li>足球美女</li>
+				</ul>
+			</nav>
+			<section>
+				<ul>
+				    <li>
+				    	<img src="img/img1.jpg" alt="" />
+				    	<p>西甲-巴萨3-4客负  皇马1-1丢榜首</p>
+				    </li>
+				    <li>
+				    	<img src="img/img2.png" alt="" />
+				    	<p>英超-曼联憾平 曼城0-2热刺  瓜帅首败</p>
+				    </li>
+				    <li>
+				    	<img src="img/img3.jpg" alt="" />
+				    	<p>意甲-AC米兰4-3 国米1-2罗马</p>
+				    </li>
+				    <li>
+				    	<img src="img/img4.jpg" alt="" />
+				    	<p>德甲-拜仁1-1 终结连胜  药厂擒多特</p>
+				    </li>
+				     <li>
+				    	<img src="img/img1.jpg" alt="" />
+				    	<p>西甲-巴萨3-4客负  皇马1-1丢榜首</p>
+				    </li>
+				    <li>
+				    	<img src="img/img2.png" alt="" />
+				    	<p>英超-曼联憾平 曼城0-2热刺  瓜帅首败</p>
+				    </li>
+				    <li>
+				    	<img src="img/img3.jpg" alt="" />
+				    	<p>意甲-AC米兰4-3 国米1-2罗马</p>
+				    </li>
+				    <li>
+				    	<img src="img/img4.jpg" alt="" />
+				    	<p>德甲-拜仁1-1 终结连胜  药厂擒多特</p>
+				    </li>
+				     <li>
+				    	<img src="img/img1.jpg" alt="" />
+				    	<p>西甲-巴萨3-4客负  皇马1-1丢榜首</p>
+				    </li>
+				    <li>
+				    	<img src="img/img2.png" alt="" />
+				    	<p>英超-曼联憾平 曼城0-2热刺  瓜帅首败</p>
+				    </li>
+				    <li>
+				    	<img src="img/img3.jpg" alt="" />
+				    	<p>意甲-AC米兰4-3 国米1-2罗马</p>
+				    </li>
+				    <li>
+				    	<img src="img/img4.jpg" alt="" />
+				    	<p>德甲-拜仁1-1 终结连胜  药厂擒多特</p>
+				    </li>
+				</ul>
+			</section>
+			<footer>
+				<ul>
+					<li class="iconfont bottom-menu home">&#xe623;
+					    <p>首页</p>
+					</li>
+					<li class="iconfont bottom-menu">&#xe600;
+					    <p>发现</p>
+					</li>
+					<li class="cl">
+						<div class="iconfont bottom-menu">&#xe63e;</div>
+					</li>
+					<li class="iconfont bottom-menu">&#xe658;
+					    <p>我的</p>
+					</li>
+					<li class="iconfont bottom-menu">&#xe610;
+					    <p>退出</p>
+					</li>
+				</ul>
+			</footer>
+		</div>
+	</body>
+</html>
