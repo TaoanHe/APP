@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scale=no" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				/*background: pink;*/
+				overflow: hidden;
+			}
+			div{
+				width: 100%;
+				height: 100%;
+				transition: all 1s;
+			}
+			div ul{
+				width: 333%;
+				height: 100%;
+				list-style: none;
+			}
+			div ul li{
+				width: 30%;
+				height: 100%;
+				float: left;
+			}
+			div ul li:nth-child(1){
+				background: url(img/img1.jpg) no-repeat;
+			}
+			div ul li:nth-child(2){
+				background: url(img/img4.jpg) no-repeat;
+			}
+			div ul li:nth-child(3){
+				background: url(img/img2.png) no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script>
+			var oDiv = document.getElementById('demo');
+			document.addEventListener("touchstart",function(e){
+//				console.log(e)
+//				oDiv.innerHTML=e.touches.length;
+//				oDiv.innerHTML=e.targetTouches.length;
+//				oDiv.innerHTML=e.changedTouches.length;
+			})
+			var lis =oDiv.getElementsByTagName('li');
+			function getStyle(obj,attr){
+				return getComputedStyle(obj,null)[attr];
+			}
+			var w = parseInt(getStyle(lis[0],"width"));
+			lis[0].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				this.addEventListener("touchmove",function(e){
+					oDiv.style.transform="translate3d(-"+w+"px,0,0)";
+				})
+				
+			})
+			var flag=true;
+			lis[1].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				if(flag){
+					oDiv.style.transform="translate3d(-"+w*2+"px,0,0)";
+				}
+				else{
+					oDiv.style.transform="translate3d(0,0,0)";
+				}
+				flag = !flag;
+			})
+			lis[2].addEventListener("touchstart",function(e){
+				e.preventDefault();
+				
+				oDiv.style.transform="translate3d(-"+w+"px,0,0)";
+			})
+		</script>
+	</body>
+</html>

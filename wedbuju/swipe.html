@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<script src="js/zepto.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/swipe.css"/>
+	</head>
+	<body>
+		<div id="contianer" class="contianer">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div>
+				<button id="btn">Open</button>
+			</div>
+		</div>
+		<script>
+			var contianer = document.getElementById('contianer')
+			contianer.addEventListener("touchstart",function(e){
+				e.preventDefault();
+			})
+			$(function(){
+				var w=$("#contianer").find("div").eq(0).width();
+				var n=0;
+				$("#contianer").on("swipeLeft",function(){
+					n++;
+					if(n>$("#contianer").find("div").size()-1){
+						n=$("#contianer").find("div").size()-1;
+					}
+					contianer.style.transform="translate3d(-"+n*+w+"px,0,0)"
+				})
+				$("#contianer").on("swipeRight",function(){
+					n--;
+					if(n<0){
+						n=0;
+					}
+					contianer.style.transform="translate3d(-"+n*+w+"px,0,0)"
+				})
+				$("#btn").on("tap",function(){
+					location.href="https://www.baidu.com";
+				})
+			})
+		</script>
+	</body>
+</html>

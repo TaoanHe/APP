@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	overflow: hidden;
+}
+.contianer{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.contianer div{
+	width: 100%;
+	height: 100%;
+	flex-shrink: 0;
+}
+.contianer div:nth-child(1){
+	background: pink;
+}
+.contianer div:nth-child(2){
+	background: palegreen;
+}
+.contianer div:nth-child(3){
+	background: paleturquoise;
+}
+.contianer div:nth-child(4){
+	background: plum;
+	position: relative;
+}
+.contianer div:nth-child(4) button{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition:-50%,-50%;
+}
